@@ -1,4 +1,6 @@
-import Palestra.Palestra;
+import br.com.vini.tranalhoimplementacao.certificado.Certificado;
+import br.com.vini.tranalhoimplementacao.palestra.Palestra;
+import br.com.vini.tranalhoimplementacao.participantes.Participantes;
 
 
 public class Evento {
