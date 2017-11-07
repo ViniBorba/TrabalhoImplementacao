@@ -6,25 +6,39 @@ import br.com.vini.tranalhoimplementacao.arquivoscsv.LeitorDeArquivos;
 public class Palestra {
 	
 	//dados tem que vir do arquivo lido
-	//private String sala;
-	private int hora;
+	String sala;
+	private String hora;
 	private String titulo;
-	private String resumoDaPalestra;
+	String resumoDaPalestra;
 	
 	private Palestrante palestra;
 	
-	//LeitorDeArquivos carregaPalestra = new LeitorDeArquivos("endereco");
+	public Palestra(String sala, String hora, String titulo, String resumoDaPalestra ){
+		sala = this.sala;
+		hora = this.hora;
+		titulo = this.titulo;
+		resumoDaPalestra = this.resumoDaPalestra;
+		
+		
+	}
 	
+	public String toString(){
+		return sala;
+	}
 	
 	public static void main(String[] args){
-		String sala;
-		LeitorDeArquivos carregaPalestra = new LeitorDeArquivos("/home/vini/Imagens/palestras.csv");
-
-		//carregaPalestra.facaAte();
-		sala = carregaPalestra.leiaAteVirgula();
-		//System.out.println(carregaPalestra.leiaAteVirgula());
-		System.out.println(sala);
 		
+		LeitorDeArquivos carregaPalestra = new LeitorDeArquivos("/home/vini/Imagens/palestras.csv");
+		
+		Palestra palestra1 = new Palestra(carregaPalestra.getArquivo().next(), carregaPalestra.getArquivo().next(), carregaPalestra.getArquivo().next(), carregaPalestra.getArquivo().next());
+		
+		System.out.println(palestra1);
+		
+		/*
+		while(carregaPalestra.facaAte()){
+		System.out.println(carregaPalestra.toString());
+		}
+		*/
 		
 	}
 	
