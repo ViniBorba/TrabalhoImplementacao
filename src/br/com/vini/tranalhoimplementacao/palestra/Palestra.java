@@ -47,9 +47,7 @@ public class Palestra {
 		LeitorDeArquivos carregaPalestra = new LeitorDeArquivos("/home/vini/Imagens/palestras.csv");
 		
 		Palestra palestra1 = new Palestra(carregaPalestra.getArquivo());
-		
-		System.out.println("Vai");
-		
+				
 		System.out.println(palestra1.toString());
 		
 		/*
