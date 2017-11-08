@@ -8,38 +8,29 @@ import br.com.vini.tranalhoimplementacao.arquivoscsv.LeitorDeArquivos;
 public class Palestra {
 	
 	//dados tem que vir do arquivo lido
-	public String sala = null;
+	public String sala;
 	private String hora;
 	private String titulo;
 	String resumoDaPalestra;
 	
 	private Palestrante palestra;
 	
-	//COnstrutor de Palestra
+	//Construtor de Palestra
 	public Palestra(Scanner arquivoComDados){
 		
-		//arquivoComDados.useDelimiter("[,\n]");
-		
-		//this.sala = arquivoComDados.next();
-		
-		while(arquivoComDados.hasNext()){
-			arquivoComDados.useDelimiter("[,\n]");
-			
-			if(this.sala == null)
+		arquivoComDados.useDelimiter("[,\n]");
 			
 			this.sala = arquivoComDados.next();
-		}
-		
-		sala = this.sala;
-		hora = this.hora;
-		titulo = this.titulo;
-		resumoDaPalestra = this.resumoDaPalestra;
-		
-		
+			this.hora = arquivoComDados.next();
+			this.titulo = arquivoComDados.next();
+			this.resumoDaPalestra = arquivoComDados.next();
+
 	}
 	
+	//Subscrever o método toString()
+	@Override
 	public String toString(){
-		return sala;
+		return "Sala: "+sala + "\nhora: " + hora + "\ntitulo: " + titulo + "\nResumo Da Palestra: " + resumoDaPalestra;
 	}
 	
 	
@@ -57,7 +48,9 @@ public class Palestra {
 		
 		Palestra palestra1 = new Palestra(carregaPalestra.getArquivo());
 		
-		System.out.println(palestra1.getSala());
+		System.out.println("Vai");
+		
+		System.out.println(palestra1.toString());
 		
 		/*
 		while(carregaPalestra.facaAte()){
