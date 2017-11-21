@@ -44,7 +44,7 @@ public class Palestra {
 	
 	public static void main(String[] args){
 		
-		LeitorDeArquivos carregaPalestra = new LeitorDeArquivos("/home/vini/Imagens/palestras.csv");
+		LeitorDeArquivos carregaPalestra = new LeitorDeArquivos("/home/vini/Documentos/palestras.csv");
 		
 		Palestra palestra1 = new Palestra(carregaPalestra.getArquivo());
 				

@@ -16,10 +16,12 @@ public class LeitorDeArquivos {
 	}
 	*/
 	
+	//construtor que recebe um arquivo 
 	public LeitorDeArquivos(String endereco){
 		try {
 			
-				this.arquivo = new Scanner(new BufferedReader(new FileReader(endereco)));
+			//esse arquivo e tratado como Scanner	
+			this.arquivo = new Scanner(new BufferedReader(new FileReader(endereco)));
 				
 				this.arquivo.useDelimiter("[,\n]");
 			
@@ -48,6 +50,7 @@ public class LeitorDeArquivos {
 		return this.arquivo.useDelimiter("[,\n]");
 	}
 	
+	//devolve o arquivo Scanner que ele leu no construtor
 	public Scanner getArquivo(){
 		return this.arquivo;
 	}
