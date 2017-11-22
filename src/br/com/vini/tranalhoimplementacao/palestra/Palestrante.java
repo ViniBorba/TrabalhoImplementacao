@@ -25,6 +25,6 @@ public class Palestrante {
 	}
 	@Override
 	public String toString(){
-		return "Dados da Palestra: "+dadosDaPalestra+"\nCurriculo do Palestrante: "+curriculoDoPalestrante+"\nEmail do Palestrante: "+emailDoPalestrante+"\nTelefone do Palestrante: "+telefoneDoPalestrante+"\nNome do Palestrante: "+nomeDoPalestrante;
+		return "Dados da Palestra: " +dadosDaPalestra+ "\nCurriculo do Palestrante: " +curriculoDoPalestrante+ "\nEmail do Palestrante: " +emailDoPalestrante+ "\nTelefone do Palestrante: " +this.telefoneDoPalestrante+ "\nNome do Palestrante: " +nomeDoPalestrante;
 	}
 }
